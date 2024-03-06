@@ -1,0 +1,291 @@
+
+main{
+    grid-area: m;
+    background-color: #eee;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    padding: 5px 15px;
+    margin-bottom: 75px;
+    background-color: #ECA;
+ }
+figure{
+    margin: 0;
+    width: 100%;
+}
+figure img{
+    width: 100%;
+}
+
+.plataformas{
+    display: flex;
+    justify-content: space-evenly;
+    background-color:#EA6 ;
+    width: 100%;
+}
+.plataformas i{
+    padding: 10px;
+}
+
+
+
+.seccionSecundaria{
+    display: flex;
+    justify-content: space-around;
+}
+.seccionSecundaria figure{
+    min-width: 200px;
+    max-width: 400px;
+}
+
+
+.elementosDestacados{
+    align-self: center;
+    padding: 20px;
+    min-width: 200px;
+}
+.elementosDestacados a{
+    text-decoration: none;
+    color: #000;
+    font-size: 0.8em;
+    padding: 10px;
+    margin: 10px;
+    width: 80%;
+    text-align: center;
+}
+/** ANIMACIONES **/
+
+/**ANIMACION LOGO **/
+#hogueraIntensa{
+    fill: #fc0;
+}
+#logo:hover{
+    #hogueraIntensa{
+        fill: blue;
+    }
+}
+#cascoLogo{
+    width: 500px;
+    background-color: rgba(238, 102, 0);
+    transform: scale(1);
+    transition: 2s;
+    animation-name: cascoLogo;
+    animation-duration: 4s;
+    
+}
+
+@keyframes cascoLogo {
+    0%{
+        transform: scale(0.3);
+    }
+    50%{
+        transform: scale(1.3);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+/** ANIMACION PULSE EFFECT EN ELEMENTOS DESTACADOS **/
+.elementosDestacados a{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(238, 102, 0,.7);
+    border-radius: 1.5em;
+    animation-name: pulseEffect;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.elementosDestacados a:hover{
+    background-color: rgba(238, 102, 0);
+    transform: scale(1.1);
+    transition: .2s;
+    z-index: 1000;
+}
+
+@keyframes pulseEffect {
+    0% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(238, 102, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(238, 102, 0,.0);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+/** ANIMACION BORDES EN IMAGEN PRINCIPAL **/
+#imagenPrincipal{
+    border: 10px solid black;
+    border-radius: .5em;
+    animation-name: colorBorde;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes colorBorde {
+    0%{
+        border-color: #EA6;
+    }
+    50%{
+        border-color:rgb(238, 102, 0);
+    }
+    100%{
+        border-color: #ECA;
+    }
+    
+}
+
+/** ANIMACION EN FICHAS DE JUEGOS **/
+.destokSecundario section:hover{
+    background-color: #EA6;
+    transform: scale(1.1);
+    transition: .2s;
+    z-index: 1000;
+}
+
+/** ANIMACION BARRAS HORIZONTAL **/
+.animacionBarra{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    margin-bottom:50px;
+    flex-direction: column;
+}
+.animacionBarra .horizontal{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: #EA6;
+    border-radius: 10em;
+    animation-name: pelotaBarraHorizontal;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes pelotaBarraHorizontal {
+    0% {
+        width: 20px;
+        background-color: #EA6;
+        left: 0%;
+    }
+    50% {
+        width: 100px;
+        height: 10px;
+        background-color: #ECA;
+        
+    }
+    100% {
+        width: 20px;
+        background-color: #EA6;
+        left: 100%
+    }
+}
+
+@media only screen and (min-width: 600px) {
+
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    section{
+        max-width: 450px;
+    }
+    
+
+}
+
+@media only screen and (min-width: 900px) {
+
+    .destokPrincipal{
+        display: flex;
+        align-items:center;
+        justify-content: space-evenly;
+        margin: 40px 10%;
+        background-color: #ECA;
+
+    }
+    .destokPrincipal section{
+        margin: 0;
+        max-width: none;
+    }
+    #slider{
+        max-width: none;
+        min-width: 400px;
+        margin: 20px;
+    }
+    .seccionPrincipal{
+        min-width: 417px;
+    }
+    section{
+        max-width:none;
+    }
+    .destokSecundario{
+        display: flex;
+        gap: 20px;
+        margin: 75px 10%;
+    }
+    .seccionSecundaria{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .seccionSecundaria figure{
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+
+/** ANIMACION BARRAS HORIZONTAL **/
+
+    .animacionBarra .horizontal{
+        display: none;
+    }
+
+    .animacionBarra {
+        width: 50px;
+        height: 100%;
+        margin-bottom:0;
+
+    }
+    .animacionBarra .vertical{
+        position: relative;
+        width: 20px;
+        height: 20px;
+        background-color: #EA6;
+        border-radius: 10em;
+        animation-name: pelotaBarraVertical;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+    }
+    @keyframes pelotaBarraVertical {
+        0% {
+            height: 20px;
+            background-color: #EA6;
+            top: 0%;
+        }
+        50% {
+            height: 100px;
+            width: 10px;
+            margin: 0px 5px;
+            background-color: #ECA;
+            
+        }
+        100% {
+            height: 20px;
+            background-color: #EA6;
+            top: 100%;
+        }
+    }
+}
+

@@ -1,0 +1,168 @@
+@import url(normalize.css);
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+h1,h2,h3, a, button{
+    font-family: 'Young Serif', serif;
+}
+p,ul{
+    font-family: 'Roboto', sans-serif;
+}
+.pPrincipal{
+    color: #000;
+}
+.pSecundaria{
+    color: #333;
+}
+#grid{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "h m"
+    "h m"
+    "f f"
+    ;
+}
+
+header{
+    grid-area: h;
+    background-color: #333;
+    display: grid;
+    grid-template-rows: 80px repeat(2, auto) 50px;
+    grid-template-areas:
+    "hF"
+    "hU"
+    "."
+    "hD"
+    ;
+}
+
+header nav i{
+    color: #EA6;
+    font-size: 2rem;
+}
+header figure{
+    grid-area: hF;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+}
+#logo{
+    width: 60px;
+}
+
+header nav{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 500px;
+}
+
+header ul{
+    grid-area: hU;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    
+}
+header div{
+    font-size: 2rem;
+    color: #eca;
+    grid-area: hD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header li{
+    display: flex;
+    padding: 10px;
+}
+header li .linkTexto{
+    font-weight: bold;
+    color:#EA6;;
+    padding: 7px 5px;
+    visibility: hidden;
+    position: absolute;
+    margin: 0;
+    text-decoration: none;
+}
+main{
+    grid-area: m;
+}
+main a:hover{
+    transform: scale(1.1);
+    transition: .2s;
+    z-index: 1000;
+}
+
+footer{
+    grid-area: f;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    color: #eee;
+}
+
+footer div{
+    text-align: center;
+    margin: 5px 0px;
+}
+footer h5{
+    margin: 5px;
+}
+footer p{
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.7em;
+}
+footer p a{
+    color: #eee;
+}
+@media only screen and (min-width: 600px) {
+    #grid{
+        grid-template-columns: auto auto;
+        grid-template-rows: 80px;
+        grid-template-areas:
+        "h h"
+        "m m"
+        "f f"
+        ;
+    }
+    header{
+        grid-template-columns: 100px repeat(2, auto) 50px;
+        grid-template-areas:
+        "hF hU . hD"
+        ;
+    }
+    header ul{
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+    }
+    header nav{
+        align-items: center;
+    }
+    li .linkTexto{
+        visibility: visible;
+        position: relative;
+    }
+    footer{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    footer i{
+        padding: 10px;        
+    }
+    }

@@ -1,0 +1,132 @@
+
+main{
+    background-color: #eee;
+    
+}
+.juegoNivel1{
+    display: flex;
+    flex-direction: column;
+    background-color: #ECA;
+    margin-bottom: 50px;
+}
+.juegoNivel1 h1,.juegoEspecificaciones{
+    margin: 10px;
+}
+.juegoNivel1 .elementosDestacados{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-width: 150px;
+}
+
+.elementosDestacados a{
+    text-decoration: none;
+    color: #000;
+    font-size: 0.8em;
+    padding: 10px;
+    margin: 10px;
+    width: 80%;
+    text-align: center;
+}
+.elementosDestacados a:nth-child(2){
+    background-color: rgba(238, 102, 0,.7);
+}
+.elementosDestacados a:nth-child(2):hover{
+    background-color: rgba(238, 102, 0);
+}
+.elementosDestacados a:nth-child(1){
+    background-color: rgba(238, 170, 102,.7);
+}
+.elementosDestacados a:nth-child(1):hover{
+    background-color: rgba(238, 170, 102);
+}
+.juegoNivel1 figure{
+    margin: 5px;
+    width: 100%;
+}
+.juegoNivel1 img{
+    width: 100%;
+}
+.juegoNivel2{
+    display: flex;
+    flex-direction: column;
+}
+.juegoNivel3{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    grid-row: 1;
+}
+.plataformas{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px;
+    background-color: #EA6;
+}
+.juegoDescripcion{
+    padding: 20px;
+    margin-bottom: 50px;
+}
+.galeriaNivel1{
+    background-color: #ECA;
+}
+.galeriaNivel1 h2{
+    padding: 20px;
+    margin: 0;
+}
+.galeriaNivel2{
+    display: flex;
+
+}
+.galeriaNivel2 figure{
+    margin: 0;
+    padding: 10px;
+}
+
+.galeriaNivel2 figure:hover{
+    transform: scale(1.1);
+    transition: .2s;
+    z-index: 1000;
+}
+
+.galeriaNivel2 img{
+    width: 100%;
+}
+@media only screen and (min-width: 600px) {
+    .elementosDestacados a{
+        font-size: 1.5em;
+    }
+    main{
+        grid-column: 1/3;
+    }
+}
+@media only screen and (min-width: 900px) {
+    .juegoNivel1{
+        align-items: center;
+        margin-bottom: 0;
+    }
+    .juegoNivel2{
+        flex-direction: row;
+    }
+    .elementosDestacados{
+        order: 1;
+    }
+    .juegoNivel1 figure{
+        width: 100%;
+        order: 2;
+
+    }
+    .plataformas{
+        width: 100%;
+    }
+    .descripcionGaleria{
+        display: flex;
+    }
+    .juegoDescripcion{
+        margin-bottom: 0;
+    }
+    .galeriaNivel1{
+        margin: 20px;
+    }
+}
