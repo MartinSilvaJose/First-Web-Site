@@ -3,68 +3,93 @@
 @import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-*{
+#upEvent {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(3, 3, 3, 0.5);
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 2em;
+    position: sticky;
+    bottom: 10%;
+    left: 95%;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+* {
     box-sizing: border-box;
 }
 
-h1,h2,h3, a, button{
+h1,
+h2,
+h3,
+a,
+button {
     font-family: 'Young Serif', serif;
 }
-p,ul{
+
+p,
+ul {
     font-family: 'Roboto', sans-serif;
 }
-.pPrincipal{
+
+.pPrincipal {
     color: #000;
 }
-.pSecundaria{
+
+.pSecundaria {
     color: #333;
 }
-#grid{
+
+#grid {
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: auto auto auto;
     grid-template-areas:
-    "h m"
-    "h m"
-    "f f"
+        "h m"
+        "h m"
+        "f f"
     ;
 }
 
-header{
+header {
     grid-area: h;
     background-color: #333;
     display: grid;
     grid-template-rows: 80px repeat(2, auto) 50px;
     grid-template-areas:
-    "hF"
-    "hU"
-    "."
-    "hD"
+        "hF"
+        "hU"
+        "."
+        "hD"
     ;
 }
 
-header nav i{
+header nav i {
     color: #EA6;
     font-size: 2rem;
 }
-header figure{
+
+header figure {
     grid-area: hF;
     margin: 10px;
     display: flex;
     align-items: center;
 }
-#logo{
+
+#logo {
     width: 60px;
 }
 
-header nav{
+header nav {
     display: flex;
     align-items: flex-start;
     justify-content: center;
     max-width: 500px;
 }
 
-header ul{
+header ul {
     grid-area: hU;
     list-style-type: none;
     margin: 0;
@@ -73,9 +98,10 @@ header ul{
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    
+
 }
-header div{
+
+header div {
     font-size: 2rem;
     color: #eca;
     grid-area: hD;
@@ -84,29 +110,33 @@ header div{
     justify-content: center;
 }
 
-header li{
+header li {
     display: flex;
     padding: 10px;
 }
-header li .linkTexto{
+
+header li .linkTexto {
     font-weight: bold;
-    color:#EA6;;
+    color: #EA6;
+    ;
     padding: 7px 5px;
     visibility: hidden;
     position: absolute;
     margin: 0;
     text-decoration: none;
 }
-main{
+
+main {
     grid-area: m;
 }
-main a:hover{
+
+main a:hover {
     transform: scale(1.1);
     transition: .2s;
     z-index: 1000;
 }
 
-footer{
+footer {
     grid-area: f;
     background-color: #333;
     display: flex;
@@ -114,55 +144,65 @@ footer{
     color: #eee;
 }
 
-footer div{
+footer div {
     text-align: center;
     margin: 5px 0px;
 }
-footer h5{
+
+footer h5 {
     margin: 5px;
 }
-footer p{
+
+footer p {
     margin: 0;
     display: flex;
     justify-content: space-around;
     font-size: 0.7em;
 }
-footer p a{
+
+footer p a {
     color: #eee;
 }
+
 @media only screen and (min-width: 600px) {
-    #grid{
+    #grid {
         grid-template-columns: auto auto;
         grid-template-rows: 80px;
         grid-template-areas:
-        "h h"
-        "m m"
-        "f f"
+            "h h"
+            "m m"
+            "f f"
         ;
     }
-    header{
+
+    header {
         grid-template-columns: 100px repeat(2, auto) 50px;
         grid-template-areas:
-        "hF hU . hD"
+            "hF hU . hD"
         ;
     }
-    header ul{
+
+    header ul {
         flex-direction: row;
         width: 100%;
         justify-content: space-around;
     }
-    header nav{
+
+    header nav {
         align-items: center;
     }
-    li .linkTexto{
+
+    li .linkTexto {
         visibility: visible;
         position: relative;
     }
-    footer{
+
+    footer {
         flex-direction: row;
         justify-content: space-between;
     }
-    footer i{
-        padding: 10px;        
+
+    footer i {
+        padding: 10px;
     }
-    }
+}

@@ -1,0 +1,15 @@
+main {
+    height: 80vh;
+    margin: 20px;
+}
+
+.carrito {
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #eca;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border: solid 1px #000;
+}
