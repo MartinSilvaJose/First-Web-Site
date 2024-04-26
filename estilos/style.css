@@ -89,6 +89,13 @@ header nav {
     max-width: 500px;
 }
 
+/* Aquí jugamos con el boton de abrir y cerrar el menú */
+
+
+.borrado {
+    visibility: hidden;
+}
+
 header ul {
     grid-area: hU;
     list-style-type: none;
@@ -165,6 +172,14 @@ footer p a {
 }
 
 @media only screen and (min-width: 600px) {
+    .openMenu {
+        display: none;
+    }
+
+    .borrado {
+        visibility: visible;
+    }
+
     #grid {
         grid-template-columns: auto auto;
         grid-template-rows: 80px;
