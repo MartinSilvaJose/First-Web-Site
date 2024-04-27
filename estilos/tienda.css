@@ -33,20 +33,12 @@ figure img {
     text-align: center;
 }
 
-.elementosDestacados a:nth-child(2) {
+.elementosDestacados a {
     background-color: rgba(238, 102, 0, .7);
 }
 
-.elementosDestacados a:nth-child(2):hover {
+.elementosDestacados a:hover {
     background-color: rgba(238, 102, 0);
-}
-
-.elementosDestacados a:nth-child(1) {
-    background-color: rgba(238, 170, 102, .7);
-}
-
-.elementosDestacados a:nth-child(1):hover {
-    background-color: rgba(238, 170, 102);
 }
 
 .articuloPortadaNivel1 {
@@ -173,4 +165,8 @@ figure img {
 .close:hover {
     cursor: pointer;
 
+}
+
+.añadirCesta:hover {
+    cursor: pointer;
 }
