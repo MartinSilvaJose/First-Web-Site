@@ -1,5 +1,4 @@
 main {
-    height: 80vh;
     margin: 20px;
 }
 
@@ -26,4 +25,11 @@ main {
     background-color: rgba(238, 102, 0);
     border: solid 1px #000;
     border-radius: 10px;
+}
+
+.contenedorAcordeon,
+.contenedorPestañas {
+    width: 80%;
+    border: 1px solid #ccc;
+    margin: 0 auto;
 }
