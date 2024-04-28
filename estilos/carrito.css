@@ -17,3 +17,13 @@ main {
 .tabla {
     text-align: center;
 }
+
+#summary {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgba(238, 102, 0);
+    border: solid 1px #000;
+    border-radius: 10px;
+}

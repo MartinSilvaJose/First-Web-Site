@@ -92,36 +92,6 @@ const modal = htmlToElement(`
     </div>
 `);
 
-//Mostrar las celdas de la tabla con cada articulo de la cesta
-
-const cesta = JSON.parse(localStorage.getItem('cesta')) || [];
-
-// Crear un objeto para mantener el recuento de cada producto
-let recuentoProductos = {};
-
-cesta.forEach((producto) => {
-    // Si el producto ya existe en el objeto, incrementar su recuento
-    // Si no, inicializar su recuento a 1
-    recuentoProductos[producto.nombre] = (recuentoProductos[producto.nombre] || 0) + 1;
-});
-
-console.log(recuentoProductos); // Imprimir el recuento de productos
-
-const tabla = document.querySelector('.tabla');
-
-cesta.forEach((producto) => {
-    tabla.innerHTML += `
-        <tr>
-            <td>${producto.nombre}</td>
-            <td>${producto.precio}</td>
-            <td>${recuentoProductos[producto.nombre]}</td>
-        </tr>
-    `;
-});
-//Mostrar el precio total de la cesta
-const precioTotal = cesta.reduce((acc, producto) => acc + producto.precio, 0);
-document.querySelector('.precioTotal').textContent = precioTotal;
-
 
 
 
